@@ -1,0 +1,48 @@
+$primaryColor : #974578;
+$primaryColorHover : #006F7B;
+$secondaryColor : #b9679a;
+$whiteColor : #FFFFFF;
+
+
+@mixin button-color($primaryColor,$secondaryColor) {
+  background: $primaryColor;
+  background-image: linear-gradient(to bottom, $primaryColor 0px, $secondaryColor 100%);
+  border-color: $primaryColor;
+}
+
+.marginalized-2x{
+    margin: 10px auto;
+    width:80%;
+}
+
+.main {
+    color: '#333';
+    font-size: 16px;
+    padding: 10px;
+}
+
+.btn-color-primary {
+    @include button-color($primaryColor,$secondaryColor);
+}
+
+.btn-color-primary:hover {
+    @include button-color($primaryColorHover,$secondaryColor);
+}
+
+.submit {
+    padding: 13px 30px;
+    line-height: 1;
+    color: #000;
+    border: 1px solid #D9D9D9;
+    background: $whiteColor none repeat scroll 0 0;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.submit:hover {
+    background: $primaryColor;
+    color: $whiteColor;
+    border: 1px solid #006F7B;
+}
