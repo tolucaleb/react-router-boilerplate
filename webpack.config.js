@@ -52,6 +52,10 @@ if (process.env.NODE_ENV === 'development') {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
           use: 'url-loader?limit=10000&mimetype=image/svg+xml',
         },
+        {
+          test: /\.(jpe?g|png|gif)$/i,
+          use: 'url-loader',
+        },
       ],
     },
     plugins: [
@@ -116,6 +120,10 @@ if (process.env.NODE_ENV === 'development') {
         }, {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
           use: 'url-loader?limit=10000&mimetype=image/svg+xml',
+        },
+        {
+          test: /\.(jpe?g|png|gif)$/i,
+          use: 'url-loader',
         },
       ],
     },
